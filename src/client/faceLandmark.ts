@@ -41,7 +41,10 @@ export default class FaceMeshDetector {
             throw new Error('call the loadDetector method first on this class before calling this')
         const data = await this.detector.estimateFaces(source)
         const keypoints = (data as FaceLandmark[])[0]?.keypoints
+        // console.log(data);
+        // console.log(keypoints);
         if (keypoints) return keypoints
         return []
+
     }
 }

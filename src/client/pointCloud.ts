@@ -16,6 +16,8 @@ export default class PointCloud {
     }
 
     updateProperty(attribute: THREE.BufferAttribute, name: string) {
+        // console.log(name);
+        // console.log(attribute);
         this.bufferGeometry.setAttribute(name, attribute)
         this.bufferGeometry.attributes[name].needsUpdate = true
     }
